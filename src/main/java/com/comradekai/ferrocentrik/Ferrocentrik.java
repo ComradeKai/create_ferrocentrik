@@ -1,5 +1,7 @@
 package com.comradekai.ferrocentrik;
 
+import com.comradekai.ferrocentrik.item.ModItems;
+import net.minecraft.world.level.ItemLike;
 import org.slf4j.Logger;
 
 import com.mojang.logging.LogUtils;
@@ -41,6 +43,9 @@ public class Ferrocentrik {
     // The constructor for the mod class is the first code that is run when your mod is loaded.
     // FML will recognize some parameter types like IEventBus or ModContainer and pass them in automatically.
     public Ferrocentrik(IEventBus modEventBus, ModContainer modContainer) {
+
+        ModItems.register(modEventBus);
+
         // Register the commonSetup method for modloading
         modEventBus.addListener(this::commonSetup);
 
@@ -49,12 +54,20 @@ public class Ferrocentrik {
         // Do not add this line if there are no @SubscribeEvent-annotated functions in this class, like onServerStarting() below.
         NeoForge.EVENT_BUS.register(this);
 
+        modEventBus.addListener(this::addCreative);
+
         // Register our mod's ModConfigSpec so that FML can create and load the config file for us
         modContainer.registerConfig(ModConfig.Type.COMMON, Config.SPEC);
     }
 
     private void commonSetup(FMLCommonSetupEvent event) {
 
+    }
+
+    private void addCreative(BuildCreativeModeTabContentsEvent event) {
+        if(event.getTabKey() == CreativeModeTabs.INGREDIENTS) {
+            event.accept((ItemLike) ModItems.TREATED_TARP);
+        }
     }
 
     // You can use SubscribeEvent and let the Event Bus discover methods to call

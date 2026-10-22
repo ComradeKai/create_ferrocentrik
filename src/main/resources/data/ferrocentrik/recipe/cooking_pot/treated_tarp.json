@@ -1,0 +1,39 @@
+{
+  "neoforge:conditions": [
+    {
+      "type": "neoforge:mod_loaded",
+      "modid": "farmersdelight"
+    },
+    {
+      "type": "neoforge:mod_loaded",
+      "modid": "blocksabound"
+    },
+    {
+      "type": "neoforge:mod_loaded",
+      "modid": "nomansland"
+    }
+  ],
+  "type": "farmersdelight:cooking",
+  "experience": 1.0,
+  "ingredients": [
+    {
+      "tag": "ferrocentrik:tarp_materials"
+    },
+    {
+      "tag": "ferrocentrik:tarp_materials"
+    },
+    {
+      "tag": "ferrocentrik:tarp_materials"
+    },
+    {
+      "item": "blocksabound:tar"
+    },
+    {
+      "item": "nomansland:resin_oil_bottle"
+    }
+  ],
+  "result": {
+    "count": 3,
+    "id": "ferrocentrik:treated_tarp"
+  }
+}
