@@ -1,9 +1,6 @@
-MIT License
+MIT License, for code exclusively
 
-Copyright (c) 2023 NeoForged project
-
-This license applies to the template files as supplied by github.com/NeoForged/MDK
-
+This license applies only to code within the Create: Ferrocentrik project. All art assets are licensed as ARR.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal
