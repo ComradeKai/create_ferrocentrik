@@ -1,0 +1,20 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "T": {
+      "item": "ferrocentrik:treated_tarp"
+    },
+    "C": {
+      "item": "create:copper_casing"
+    }
+  },
+  "pattern": [
+    "C",
+    "T"
+  ],
+  "result": {
+    "count": 1,
+    "id": "create:spout"
+  }
+}

@@ -67,6 +67,7 @@ public class Ferrocentrik {
     private void addCreative(BuildCreativeModeTabContentsEvent event) {
         if(event.getTabKey() == CreativeModeTabs.INGREDIENTS) {
             event.accept((ItemLike) ModItems.TREATED_TARP);
+            event.accept((ItemLike) ModItems.CAST_IRON_SHEET);
         }
     }
 

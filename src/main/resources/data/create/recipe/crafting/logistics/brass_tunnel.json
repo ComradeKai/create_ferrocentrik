@@ -1,0 +1,24 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "A": {
+      "tag": "c:ingots/brass"
+    },
+    "E": {
+      "item": "create:electron_tube"
+    },
+    "T": {
+      "item": "ferrocentrik:treated_tarp"
+    }
+  },
+  "pattern": [
+    "E ",
+    "AA",
+    "TT"
+  ],
+  "result": {
+    "count": 2,
+    "id": "create:brass_tunnel"
+  }
+}
