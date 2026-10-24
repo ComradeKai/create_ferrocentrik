@@ -9,7 +9,7 @@ import net.neoforged.neoforge.registries.DeferredRegister;
 import com.simibubi.create.content.processing.sequenced.SequencedAssemblyItem;
 
 public class ModItems {
-    public static final DeferredRegister<Item> ITEMS = DeferredRegister.createItems(Ferrocentrik.MODID);
+    public static final DeferredRegister.Items ITEMS = DeferredRegister.createItems(Ferrocentrik.MODID);
 
     // Basic ingredients
     public static final DeferredHolder<Item, Item> TREATED_TARP = ITEMS.register("treated_tarp",
@@ -18,11 +18,14 @@ public class ModItems {
             () -> new Item(new Item.Properties()));
 
     // Sequenced Assembly
-    public static final DeferredItem<SequencedAssemblyItem>
-            INCOMPLETE_MACHINE_CASING = sequencedIngredient("incomplete_machine_casing");
+    public static final DeferredHolder<Item, Item>
+            INCOMPLETE_MACHINE_CASING = ITEMS.registerItem("incomplete_machine_casing",
+            (properties) -> {
+                return new SequencedAssemblyItem(properties);
+        }
+    );
 
     public static void register(IEventBus bus) {
         ITEMS.register(bus);
     }
-
 }

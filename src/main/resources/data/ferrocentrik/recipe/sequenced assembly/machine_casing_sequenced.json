@@ -1,0 +1,61 @@
+{
+  "type": "create:sequenced_assembly",
+  "ingredient": {
+    "tag": "ferrocentrik:machine_frames"
+  },
+  "results": [
+    {
+      "id": "create:andesite_casing"
+    }
+  ],
+  "sequence": [
+    {
+      "type": "create:deploying",
+      "ingredients": [
+        {
+          "item": "ferrocentrik:incomplete_machine_casing"
+        },
+        {
+          "item": "minecraft:iron_nugget"
+        }
+      ],
+      "results": [
+        {
+          "id": "ferrocentrik:incomplete_machine_casing"
+        }
+      ]
+    },
+    {
+      "type": "create:deploying",
+      "ingredients": [
+        {
+          "item": "ferrocentrik:incomplete_machine_casing"
+        },
+        {
+          "item": "ferrocentrik:cast_iron_sheet"
+        }
+      ],
+      "results": [
+        {
+          "id": "ferrocentrik:incomplete_machine_casing"
+        }
+      ]
+    },
+    {
+      "type": "create:pressing",
+      "ingredients": [
+        {
+          "item": "ferrocentrik:incomplete_machine_casing"
+        }
+      ],
+      "results": [
+        {
+          "id": "ferrocentrik:incomplete_machine_casing"
+        }
+      ]
+    }
+  ],
+  "transitional_item": {
+    "id": "ferrocentrik:incomplete_machine_casing"
+  }
+}
