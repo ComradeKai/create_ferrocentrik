@@ -4,7 +4,9 @@ import com.comradekai.ferrocentrik.Ferrocentrik;
 import net.minecraft.world.item.Item;
 import net.neoforged.bus.api.IEventBus;
 import net.neoforged.neoforge.registries.DeferredHolder;
+import net.neoforged.neoforge.registries.DeferredItem;
 import net.neoforged.neoforge.registries.DeferredRegister;
+import com.simibubi.create.content.processing.sequenced.SequencedAssemblyItem;
 
 public class ModItems {
     public static final DeferredRegister<Item> ITEMS = DeferredRegister.createItems(Ferrocentrik.MODID);
@@ -14,6 +16,10 @@ public class ModItems {
             () -> new Item(new Item.Properties()));
     public static final DeferredHolder<Item, Item> CAST_IRON_SHEET = ITEMS.register("cast_iron_sheet",
             () -> new Item(new Item.Properties()));
+
+    // Sequenced Assembly
+    public static final DeferredItem<SequencedAssemblyItem>
+            INCOMPLETE_MACHINE_CASING = sequencedIngredient("incomplete_machine_casing");
 
     public static void register(IEventBus bus) {
         ITEMS.register(bus);
