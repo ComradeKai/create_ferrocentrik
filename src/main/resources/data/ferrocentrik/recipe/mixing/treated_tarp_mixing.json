@@ -1,0 +1,32 @@
+{
+  "neoforge:conditions": [
+    {
+      "type": "neoforge:mod_loaded",
+      "modid": "nomansland"
+    }
+  ],
+  "type": "create:mixing",
+  "heat_requirement": "heated",
+  "ingredients": [
+    {
+      "tag": "ferrocentrik:tarp_materials"
+    },
+    {
+      "type": "fluid_stack",
+      "amount": 125,
+      "fluid": "nomansland:resin_oil"
+    },
+    {
+      "item": "blocksabound:tar"
+    }
+  ],
+  "results": [
+    {
+    "id": "ferrocentrik:treated_tarp"
+    },
+    {
+      "chance": 0.33,
+      "id": "blocksabound:tar"
+    }
+  ]
+}
